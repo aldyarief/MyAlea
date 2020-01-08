@@ -24,10 +24,10 @@ class MainActivity : AppCompatActivity() {
         val Total = findViewById(R.id.txTotal) as TextView
         val Baik = findViewById(R.id.txBaik) as TextView
         val Gajie = findViewById(R.id.txTotalGajie) as TextView
-        var TotalGaji = findViewById(R.id.txTotalGaji) as EditText
+        val TotalGaji = findViewById(R.id.txTotalGaji) as EditText
         val TotalHari = findViewById(R.id.txTotalHariLembur) as EditText
         val TotalJam = findViewById(R.id.txTotalJamLembur) as EditText
-        var Lain = findViewById(R.id.txLain) as EditText
+        val Lain = findViewById(R.id.txLain) as EditText
 
 
         var buttonProses = findViewById(R.id.buttonProses) as Button
@@ -51,9 +51,6 @@ class MainActivity : AppCompatActivity() {
                 Baik.setText(UangBaik.toInt().toString())
                 Gajie.setText(GTGaji.toInt().toString())
             }
-
-
-
         }
     }
 }
