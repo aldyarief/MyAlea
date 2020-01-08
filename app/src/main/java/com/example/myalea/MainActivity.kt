@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import android.widget.Toast
 
 
 class MainActivity : AppCompatActivity() {
@@ -37,13 +38,22 @@ class MainActivity : AppCompatActivity() {
             Hari = TotalHari.getText().toString().toInt()
             Jam = TotalJam.getText().toString().toInt()
             Laine = Lain.getText().toString().toInt()
-            val hasil = ((Gaji * 1 / 173) * 1.5 * Hari) + (Gaji / 1 / 173) * 2 * (Jam - Hari)
-            val UangBaik = Gaji*5/100
-            val GTGaji = Gaji + hasil + UangBaik + Laine
 
-            Total.setText(hasil.toInt().toString())
-            Baik.setText(UangBaik.toInt().toString())
-            Gajie.setText(GTGaji.toInt().toString())
+            if (Gaji == 0) {
+                Toast.makeText(this, "Gaji Tidak Boleh Kosong", Toast.LENGTH_SHORT).show();
+                return@setOnClickListener
+            }else{
+                val hasil = ((Gaji * 1 / 173) * 1.5 * Hari) + (Gaji / 1 / 173) * 2 * (Jam - Hari)
+                val UangBaik = Gaji*5/100
+                val GTGaji = Gaji + hasil + UangBaik + Laine
+
+                Total.setText(hasil.toInt().toString())
+                Baik.setText(UangBaik.toInt().toString())
+                Gajie.setText(GTGaji.toInt().toString())
+            }
+
+
+
         }
     }
 }
