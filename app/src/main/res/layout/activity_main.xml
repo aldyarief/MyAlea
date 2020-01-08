@@ -28,7 +28,7 @@
         android:layout_marginTop="10dp"
         android:inputType="number"
         android:layout_below="@+id/textView4"
-        android:text="0"/>
+        android:hint="0"/>
 
     <TextView
         android:text="Total Hari Lembur"
@@ -52,7 +52,7 @@
         android:layout_alignParentStart="true"
         android:layout_marginTop="10dp"
         android:inputType="number"
-        android:text="0"/>
+        android:hint="0"/>
 
     <TextView
         android:text="Total Jam Lembur"
@@ -76,7 +76,7 @@
         android:layout_alignParentStart="true"
         android:layout_marginTop="10dp"
         android:inputType="number"
-        android:text="0"/>
+        android:hint="0"/>
 
     <TextView
         android:text="Total Lain-Lain"
@@ -100,7 +100,7 @@
         android:layout_alignParentStart="true"
         android:layout_marginTop="10dp"
         android:inputType="number"
-        android:text="0"/>
+        android:hint="0"/>
 
 
     <Button
