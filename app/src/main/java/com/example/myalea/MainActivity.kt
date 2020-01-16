@@ -23,13 +23,13 @@ class MainActivity : AppCompatActivity() {
             val passwordKey = password.text.toString()
             if (usernameKey.equals("admin") && passwordKey.equals("123")){
                 //jika login berhasil
-                Toast.makeText(getApplicationContext(), "LOGIN SUKSES", Toast.LENGTH_SHORT).show()
+                Toast.makeText(getApplicationContext(), "Selamat Datang $usernameKey", Toast.LENGTH_SHORT).show()
                 intent = Intent(this, Main2Activity::class.java)
                 startActivity(intent)
                 finish();
             }else {
                 //jika login gagal
-                Toast.makeText(this, "Data Tidak Boleh Kosong", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Username $usernameKey salah atau Password salah silahkan cek kembali", Toast.LENGTH_SHORT).show();
                 return@setOnClickListener
             }
         }

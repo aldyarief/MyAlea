@@ -6,16 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:text="Login Form"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/textView"
-        android:textAlignment="center"
-        android:textSize="30sp"
-        android:textStyle="normal|bold" />
 
     <EditText
         android:layout_width="match_parent"
@@ -24,7 +14,6 @@
         android:ems="10"
         android:id="@+id/username"
         android:hint="Username"
-        android:layout_below="@+id/textView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="37dp" />
@@ -44,11 +33,12 @@
 
     <Button
         android:id="@+id/btn_pindah"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_centerHorizontal="true"
-        android:text="Pindah"
+        android:text="Login"
         android:layout_below="@+id/password"
+        android:layout_marginTop="22dp"
         />
 </RelativeLayout>
