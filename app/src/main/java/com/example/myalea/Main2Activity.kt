@@ -1,13 +1,13 @@
 package com.example.myalea
 
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
 import android.widget.Toast
-import java.lang.Exception
+import androidx.appcompat.app.AppCompatActivity
 
 
 class Main2Activity : AppCompatActivity() {
@@ -32,6 +32,7 @@ class Main2Activity : AppCompatActivity() {
 
 
         var buttonProses = findViewById(R.id.buttonProses) as Button
+        var buttonBack = findViewById(R.id.buttonBack) as Button
         var Gaji : Int; var Hari : Int; var Jam : Int; var Laine : Int
 
 
@@ -53,6 +54,11 @@ class Main2Activity : AppCompatActivity() {
                 }catch (e : Exception){
                     Toast.makeText(this, "Data Tidak Boleh Kosong", Toast.LENGTH_SHORT).show();
                 }
+        }
+
+        buttonBack.setOnClickListener{
+            val intent = Intent(this, Main3Activity::class.java)
+            startActivity(intent)
         }
     }
 }
