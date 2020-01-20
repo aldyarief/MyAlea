@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
             if (usernameKey.equals("admin") && passwordKey.equals("123")){
                 //jika login berhasil
                 Toast.makeText(getApplicationContext(), "Selamat Datang $usernameKey", Toast.LENGTH_SHORT).show()
-                intent = Intent(this, Main2Activity::class.java)
+                intent = Intent(this, Main3Activity::class.java)
                 startActivity(intent)
                 finish();
             }else {
