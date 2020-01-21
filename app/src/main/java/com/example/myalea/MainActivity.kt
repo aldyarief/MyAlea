@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.widget.Toast
 
 
+
 class MainActivity : AppCompatActivity() {
     var username: EditText? = null
     var password:EditText? = null
@@ -17,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         var button = findViewById(R.id.btn_pindah) as Button
         var username = findViewById(R.id.username) as EditText
         var password = findViewById(R.id.password) as EditText
+        var buttonexit = findViewById(R.id.btn_tutup) as Button
 
         button.setOnClickListener() {
             val usernameKey = username.text.toString()
@@ -26,12 +28,16 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(getApplicationContext(), "Selamat Datang $usernameKey", Toast.LENGTH_SHORT).show()
                 intent = Intent(this, Main3Activity::class.java)
                 startActivity(intent)
-                finish();
+                finish()
             }else {
                 //jika login gagal
                 Toast.makeText(this, "Username $usernameKey salah atau Password salah silahkan cek kembali", Toast.LENGTH_SHORT).show();
                 return@setOnClickListener
             }
+        }
+
+        buttonexit.setOnClickListener(){
+            finish()
         }
     }
 }
