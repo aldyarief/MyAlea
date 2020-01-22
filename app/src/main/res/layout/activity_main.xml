@@ -4,44 +4,64 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/office2" >
 
-
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/username"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="0dp"
-        android:ems="10"
-        android:hint="Password"
-        android:inputType="textPassword" />
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="70dp"
+        android:background="#fff"
+        android:elevation="4dp"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:id="@+id/relativeLayout">
 
-    <EditText
-        android:id="@+id/username"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Username"
-        android:layout_centerHorizontal="true"
-        android:inputType="textPersonName" />
 
-    <Button
-        android:id="@+id/btn_pindah"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/password"
-        android:layout_marginTop="11dp"
-        android:layout_alignLeft="@id/password"
-        android:text="Login" />
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Username"
+            android:inputType="textPersonName"
+            android:textColor="#009688"
+            android:layout_centerHorizontal="true"
+            android:textColorHint="#009688" />
 
-    <Button
-        android:id="@+id/btn_tutup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/password"
-        android:layout_alignRight="@id/password"
-        android:layout_marginTop="11dp"
-        android:text="Close" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/username"
+            android:layout_marginTop="0dp"
+            android:ems="10"
+            android:hint="Password"
+            android:layout_centerHorizontal="true"
+            android:inputType="textPassword"
+            android:textColor="#009688"
+            android:textColorHint="#009688" />
+
+        <Button
+            android:id="@+id/btn_pindah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/password"
+            android:layout_marginTop="11dp"
+            android:layout_alignLeft="@id/password"
+            android:text="Login" />
+        <Button
+            android:id="@+id/btn_tutup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/password"
+            android:layout_alignRight="@id/password"
+            android:layout_marginTop="11dp"
+            android:text="Close" />
+    </RelativeLayout>
+
 </RelativeLayout>
